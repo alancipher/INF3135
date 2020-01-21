@@ -1,7 +1,37 @@
-﻿## EXEMPLE DE PROJET EN C 
-Auteur : Gustave Foka 
-Objectif : ce projet nous permet de construire un script qui 
-affiche la date du jouer et puis fait arreter le systeme pendant 10seconde et affiche au final le numero du PID en cours. 
+# **_TP1 INF3135_HIVER_**
+
+ 
+## _AUTEUR_
+  * _**Gustave Foka Samekong**_
+  * Code permanent : FOK21088509
+
+## DESCRIPTION 
+ ### cours DEVELOPPEMENT MAINTENANCE LOGICIEL  INF3531_HIVER2020  UQAM   
+ 
+   ce projet a pour but de realiser des test sur une batterie de fonctions    
+   qui sont implementees dans un logiciel de controle de vol visANT a    
+  corriger l`angle d`incidence d`un avion lors du vol afin que celui ci ne    
+ decroche pas.
+
+ ## FONCTIONNEMENT 
+    EXPLIQUER COMMENT FAIRE FONCTIONNER LE PROJET AVEC DEUX EXEMPLE  
+   Dùtilisation 
+ ## FICHIERS ACCOMPAGNANTS DESCRIPTION
+   * tp1.c
+   * README.md
+   * Makefile
+   * cp.txt
+   * liste.sh
+   * .gitignore
 
 
-> Written with [StackEdit](https://st
+  ## REFERENCES 
+
+  ## STATUT 
+   Au moment de remise de ce TP le travail est complet et nous n`avons pas  
+de bogue existant connu. 
+
+   ## AUTOEVALUATION 
+
+
+  *    

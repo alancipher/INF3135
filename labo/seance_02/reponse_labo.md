@@ -30,9 +30,9 @@ le contenu du fichier n;est pas lisible
 * QUESTION 2
 
   le format et la structure du fichier sont importants :
-  *  <cible> : <dependance>
-  *  <tab>   : <commande>
-  *  <Makefile>
+  * \<cible\> \: \< dependance \>
+  *  \<tab\>   \: \<commande\>
+  *  \<Makefile\>
 
 * QUESTION 3 
 

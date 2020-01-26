@@ -128,7 +128,7 @@ return CU_get_error();
 if ((CU_add_test (pSuite, "test etat appareil v1", testerEtatAppareuil_V1)==NULL)||
     (CU_add_test(pSuite,"test etat appareil v2", testerEtatAppareuil_V2)==NULL)||
     (CU_add_test(pSuite, "test etat appareil v3", testerEtatAppareuil_v3)==NULL )  )
-     printf("\n\n");
+    
 {
 CU_cleanup_registry();
 return CU_get_error();

@@ -9,9 +9,14 @@ tests pour les variantes de la fonction validation_etat_appareil_vX
 */
 
 /*
-initialisation de la de Cunit 
+fonction  d'initialisation de la suite de test 
 */
 int init_suite(void) { return 0; }
+
+
+/*
+fonction de nettoyage de la suite pour fermer le fichier temporaire utilise par les tests
+*/
 int clean_suite(void) { return 0; }
 
 /*
@@ -63,7 +68,7 @@ CU_ASSERT_TRUE(angle_incidence_marge_v1(0.2,-0.2));// TRUE);
 CU_ASSERT_FALSE(angle_incidence_marge_v1(0.3, -0.3));// FALSE);
 CU_ASSERT_TRUE(angle_incidence_marge_v1(2.5, 51.0));//, TRUE);
 CU_ASSERT_FALSE(angle_incidence_marge_v1(2.049, 51.1));//, FALSE);
-CU_ASSERT_TRUE(angle_incidence_marge_v1(9.0,-9.0);//, TRUE);
+CU_ASSERT_TRUE(angle_incidence_marge_v1(9.0,-9.0));//, TRUE);
 CU_ASSERT_FALSE(angle_incidence_marge_v1(8.99, -9.1));//, FALSE);
 CU_ASSERT_TRUE(angle_incidence_marge_v1(-0.5,-29.5));//,TRUE);
 CU_ASSERT_FALSE(angle_incidence_marge_v1(-0.4, -29.6)); //, FALSE);

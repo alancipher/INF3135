@@ -104,10 +104,38 @@ CU_ASSERT_TRUE(angle_incidence_marge_v3(-0.5,-29.5));//,TRUE);
 CU_ASSERT_FALSE(angle_incidence_marge_v3(-0.4, -29.6)); //, FALSE);
 }
 
+
+
 /*
 Tests pour validations  des variantes de la fonction  
 tarmac_angle_conforme_vX
 */
+void tester_tarmac_angle_conforme_v1 (void){
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0.2));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(-0.2));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v1(0.3));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v1(-0.3));
+}
+
+
+void tester_tarmac_angle_conforme_v2 (void){
+CU_ASSERT_TRUE (tarmac_angle_conforme_v2(0.2));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v2(-0.2));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v2(0));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v2(0.3));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v2(-0.3));
+}
+
+
+void tester_tarmac_angle_conforme_v3 (void){
+CU_ASSERT_TRUE (tarmac_angle_conforme_v3(0.2));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v3(-0.2));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v3(0));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v3(0.3));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v3(-0.3));
+}
+
 
 
 /*
@@ -141,9 +169,9 @@ if (pSuite == NULL)
 CU_cleanup_registry();
 return CU_get_error();
 }
-if ((CU_add_test (pSuite, "test etat appareil v1", testerEtatAppareuil_V1)==NULL)||
-    (CU_add_test(pSuite,"test etat appareil v2", testerEtatAppareuil_V2)==NULL)||
-    (CU_add_test(pSuite, "test etat appareil v3", testerEtatAppareuil_v3)==NULL )  )
+if ((CU_add_test (pSuite, "test angle sur tarmac", tester_tarmac_angle_conforme_v1)==NULL)||
+    (CU_add_test(pSuite,"test angle sur tarmac", tester_tarmac_angle_conforme_v1)==NULL)||
+    (CU_add_test(pSuite, "test angle sur tarmac", tester_tarmac_angle_conforme_v1)==NULL )  )
     
 {
 CU_cleanup_registry();
@@ -157,7 +185,15 @@ return CU_get_error();
 }
 if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
 	(CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v2)== NULL)||
+	 (CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v3)== NULL))
+
+
+
+/*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
+	(CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v2)== NULL)||
 	 (CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v3)== NULL))            
+*/
+
 {
 CU_cleanup_registry();
 return CU_get_error();

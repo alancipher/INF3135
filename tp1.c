@@ -321,7 +321,7 @@ if ((CU_add_test (pSuite, "test angle sur decollage v1", tester_decollage_angle_
 CU_cleanup_registry();
 return CU_get_error();
 
-
+}
 
 
 CU_basic_set_mode (CU_BRM_VERBOSE);

@@ -11,11 +11,7 @@ SRC2 = tp1.c
 tp1  : tp1.c flop.o
 	 gcc -Wall -Wextra -std=c11  -I/usr/include/CUnit -L/usr/lib64 -lcunit -o tp1 tp1.c flop.o
 	./tp1
-#tp1 : tp1.o
-	#gcc -o tp1 tp1.o
 
-#prog : flop.o tp1.o
-	#gcc   -o prog flop.o tp1.o
 
 .PHONY: clean
 

@@ -113,9 +113,20 @@ tarmac_angle_conforme_vX
 void tester_tarmac_angle_conforme_v1 (void){
 CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0.2));
 CU_ASSERT_TRUE (tarmac_angle_conforme_v1(-0.2));
+
 CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0));
 CU_ASSERT_FALSE (tarmac_angle_conforme_v1(0.3));
 CU_ASSERT_FALSE (tarmac_angle_conforme_v1(-0.3));
+
+
+//
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0.1));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(-0.1));
+//
+CU_ASSERT_FALSE (tarmac_angle_conforme_v1(0.20001));
+CU_ASSERT_FALSE(tarmac_angle_conforme_v1(-0.20001));
+//
+//
 }
 
 
@@ -125,6 +136,16 @@ CU_ASSERT_TRUE (tarmac_angle_conforme_v2(-0.2));
 CU_ASSERT_TRUE (tarmac_angle_conforme_v2(0));
 CU_ASSERT_FALSE (tarmac_angle_conforme_v2(0.3));
 CU_ASSERT_FALSE (tarmac_angle_conforme_v2(-0.3));
+
+
+//
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0.1));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(-0.1));
+//
+CU_ASSERT_FALSE (tarmac_angle_conforme_v1(0.20001));
+CU_ASSERT_FALSE(tarmac_angle_conforme_v1(-0.20001));
+//
+//
 }
 
 
@@ -134,6 +155,16 @@ CU_ASSERT_TRUE (tarmac_angle_conforme_v3(-0.2));
 CU_ASSERT_TRUE (tarmac_angle_conforme_v3(0));
 CU_ASSERT_FALSE (tarmac_angle_conforme_v3(0.3));
 CU_ASSERT_FALSE (tarmac_angle_conforme_v3(-0.3));
+
+
+//
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0.1));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v1(-0.1));
+//
+CU_ASSERT_FALSE (tarmac_angle_conforme_v1(0.20001));
+CU_ASSERT_FALSE(tarmac_angle_conforme_v1(-0.20001));
+//
+//
 }
 
 

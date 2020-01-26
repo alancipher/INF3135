@@ -9,7 +9,7 @@
  ### cours DEVELOPPEMENT MAINTENANCE LOGICIEL  INF3531_HIVER2020  UQAM   
  
    ce projet a pour but de realiser des test sur une batterie de fonctions    
-   qui sont implementees dans un logiciel de controle de vol visANT a    
+   qui sont implementees dans un logiciel de controle de vol visant a    
   corriger l`angle d`incidence d`un avion lors du vol afin que celui ci ne    
  decroche pas.
 

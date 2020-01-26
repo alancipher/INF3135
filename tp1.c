@@ -75,6 +75,19 @@ CU_ASSERT_FALSE(angle_incidence_marge_v1(-0.4, -29.6)); //, FALSE);
 }
 
 
+void tester_angle_incidence_marge_v2(void)
+{
+CU_ASSERT_TRUE(angle_incidence_marge_v2(0.2,-0.2));// TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v2(0.3, -0.3));// FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v2(2.5, 51.0));//, TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v2(2.049, 51.1));//, FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v2(9.0,-9.0));//, TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v2(8.99, -9.1));//, FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v2(-0.5,-29.5));//,TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v2(-0.4, -29.6)); //, FALSE);
+}
+
+
 /*
 Tests pour validations  des variantes de la fonction  
 tarmac_angle_conforme_vX
@@ -115,6 +128,7 @@ return CU_get_error();
 if ((CU_add_test (pSuite, "test etat appareil v1", testerEtatAppareuil_V1)==NULL)||
     (CU_add_test(pSuite,"test etat appareil v2", testerEtatAppareuil_V2)==NULL)||
     (CU_add_test(pSuite, "test etat appareil v3", testerEtatAppareuil_v3)==NULL )  )
+     printf("\n\n");
 {
 CU_cleanup_registry();
 return CU_get_error();
@@ -125,7 +139,8 @@ if(pSuite== NULL)
 CU_cleanup_registry();
 return CU_get_error();
 }
-if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL))
+if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
+	(CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v2)== NULL))
 {
 CU_cleanup_registry();
 return CU_get_error();

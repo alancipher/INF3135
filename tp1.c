@@ -168,6 +168,68 @@ CU_ASSERT_FALSE(tarmac_angle_conforme_v1(-0.20001));
 }
 
 
+/*
+
+ test de validation des fonctions decollage_angle_conforme_v1
+ */
+
+void tester_decollage_angle_conforme_v1(void){
+CU_ASSERT_TRUE (decollage_angle_conforme_v1(2.5));
+CU_ASSERT_TRUE (decollage_angle_conforme_v1(51.0));
+CU_ASSERT_TRUE (decollage_angle_conforme_v1(25));
+CU_ASSERT_FALSE (decollage_angle_conforme_v1(52));
+CU_ASSERT_FALSE (decollage_angle_conforme_v1(2));
+
+
+//
+CU_ASSERT_TRUE (decollage_angle_conforme_v1(50.5));
+CU_ASSERT_TRUE (decollage_angle_conforme_v1(3));
+//
+CU_ASSERT_FALSE (decollage_angle_conforme_v1(2.49));
+CU_ASSERT_FALSE(decollage_angle_conforme_v1(51.0001));
+
+
+}
+
+
+
+void tester_decollage_angle_conforme_v2(void){
+CU_ASSERT_TRUE (decollage_angle_conforme_v2(2.5));
+CU_ASSERT_TRUE (decollage_angle_conforme_v2(51.0));
+CU_ASSERT_TRUE (decollage_angle_conforme_v2(25));
+CU_ASSERT_FALSE (decollage_angle_conforme_v2(52));
+CU_ASSERT_FALSE (decollage_angle_conforme_v2(2));
+
+
+//
+CU_ASSERT_TRUE (decollage_angle_conforme_v2(50.5));
+CU_ASSERT_TRUE (decollage_angle_conforme_v2(3));
+//
+CU_ASSERT_FALSE (decollage_angle_conforme_v2(2.49));
+CU_ASSERT_FALSE(decollage_angle_conforme_v2(51.0001));
+
+
+}
+
+void tester_decollage_angle_conforme_v3(void){
+CU_ASSERT_TRUE (decollage_angle_conforme_v3(2.5));
+CU_ASSERT_TRUE (decollage_angle_conforme_v3(51.0));
+CU_ASSERT_TRUE (decollage_angle_conforme_v3(25));
+CU_ASSERT_FALSE (decollage_angle_conforme_v3(52));
+CU_ASSERT_FALSE (decollage_angle_conforme_v3(2));
+
+
+//
+CU_ASSERT_TRUE (decollage_angle_conforme_v3(50.5));
+CU_ASSERT_TRUE (decollage_angle_conforme_v3(3));
+//
+CU_ASSERT_FALSE (decollage_angle_conforme_v3(2.49));
+CU_ASSERT_FALSE(decollage_angle_conforme_v3(51.0001));
+
+
+}
+
+
 
 /*
 Tests de validation de la fonction volet_ouvert_vX
@@ -193,6 +255,9 @@ return CU_get_error();
 
 pSuite = CU_add_suite("tp1_suite_de test" , init_suite, clean_suite);
 
+
+// suite de tests pour etats appareil
+
 if (pSuite == NULL)
 
 {
@@ -209,15 +274,17 @@ CU_cleanup_registry();
 return CU_get_error();
 
 }
+
+  // suite de test pour angle tarmac 
 if(pSuite== NULL)
 {
 CU_cleanup_registry();
 return CU_get_error();
 }
 
-if ((CU_add_test (pSuite, "test angle sur tarmac", tester_tarmac_angle_conforme_v1)==NULL)||
-    (CU_add_test(pSuite,"test angle sur tarmac", tester_tarmac_angle_conforme_v1)==NULL)||
-    (CU_add_test(pSuite, "test angle sur tarmac", tester_tarmac_angle_conforme_v1)==NULL )  )
+if ((CU_add_test (pSuite, "test angle sur tarmac v1", tester_tarmac_angle_conforme_v1)==NULL)||
+    (CU_add_test(pSuite,"test angle sur tarmac v2", tester_tarmac_angle_conforme_v1)==NULL)||
+    (CU_add_test(pSuite, "test angle sur tarmac v3", tester_tarmac_angle_conforme_v1)==NULL )  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -228,7 +295,34 @@ if ((CU_add_test (pSuite, "test angle sur tarmac", tester_tarmac_angle_conforme_
 {
 CU_cleanup_registry();
 return CU_get_error();
+
 }
+
+
+
+ // suite de test pour angle conforme au decollage  
+if(pSuite== NULL)
+{
+CU_cleanup_registry();
+return CU_get_error();
+}
+
+if ((CU_add_test (pSuite, "test angle sur decollage v1", tester_decollage_angle_conforme_v1)==NULL)||
+    (CU_add_test(pSuite,"test angle sur decollage v2", tester_decollage_angle_conforme_v2)==NULL)||
+    (CU_add_test(pSuite, "test angle sur decollage v2", tester_decollage_angle_conforme_v2)==NULL )  )
+
+
+/*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
+	(CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v2)== NULL)||
+	 (CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v3)== NULL))            
+*/
+
+{
+CU_cleanup_registry();
+return CU_get_error();
+
+
+
 
 CU_basic_set_mode (CU_BRM_VERBOSE);
 CU_basic_run_tests();

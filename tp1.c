@@ -245,6 +245,77 @@ CU_ASSERT_FALSE(decollage_angle_conforme_v3(51.0001));
 }
 
 
+/*
+
+tests de validation de la fonction vol_angle_conformev1
+
+*/
+void tester_vol_angle_conforme_v1(void){
+
+CU_ASSERT_TRUE (vol_angle_conforme_v1(9.0));
+CU_ASSERT_TRUE (vol_angle_conforme_v1(-9.0));
+CU_ASSERT_TRUE (vol_angle_conforme_v1(0));
+CU_ASSERT_FALSE (vol_angle_conforme_v1(10));
+CU_ASSERT_FALSE (vol_angle_conforme_v1(-10));
+
+
+//
+CU_ASSERT_TRUE (vol_angle_conforme_v1(8.5));
+CU_ASSERT_TRUE (vol_angle_conforme_v1(-8.5));
+//
+CU_ASSERT_FALSE (vol_angle_conforme_v1(-9,001));
+CU_ASSERT_FALSE(vol_angle_conforme_v1(9.0001));
+
+
+
+}
+
+
+void tester_vol_angle_conforme_v2(void){
+
+CU_ASSERT_TRUE (vol_angle_conforme_v2(9.0));
+CU_ASSERT_TRUE (vol_angle_conforme_v2(-9.0));
+CU_ASSERT_TRUE (vol_angle_conforme_v2(0));
+CU_ASSERT_FALSE (vol_angle_conforme_v2(10));
+CU_ASSERT_FALSE (vol_angle_conforme_v2(-10));
+
+
+//
+CU_ASSERT_TRUE (vol_angle_conforme_v2(8.5));
+CU_ASSERT_TRUE (vol_angle_conforme_v2(-8.5));
+//
+CU_ASSERT_FALSE (vol_angle_conforme_v2(-9,001));
+CU_ASSERT_FALSE(vol_angle_conforme_v2(9.0001));
+
+
+
+}
+
+
+void tester_vol_angle_conforme_v3(void){
+
+CU_ASSERT_TRUE (vol_angle_conforme_v3(9.0));
+CU_ASSERT_TRUE (vol_angle_conforme_v3(-9.0));
+CU_ASSERT_TRUE (vol_angle_conforme_v3(0));
+CU_ASSERT_FALSE (vol_angle_conforme_v3(10));
+CU_ASSERT_FALSE (vol_angle_conforme_v3(-10));
+
+
+//
+CU_ASSERT_TRUE (vol_angle_conforme_v3(8.5));
+CU_ASSERT_TRUE (vol_angle_conforme_v3(-8.5));
+//
+CU_ASSERT_FALSE (vol_angle_conforme_v3(-9,001));
+CU_ASSERT_FALSE(vol_angle_conforme_v3(9.0001));
+
+
+
+}
+
+
+
+
+
 
 /*
 Tests de validation de la fonction volet_ouvert_vX
@@ -367,6 +438,40 @@ CU_cleanup_registry();
 return CU_get_error();
 
 }
+
+// SUITE DE TESTS POUR ANGLE CONFORME VOL
+
+
+if(pSuite== NULL)
+{
+CU_cleanup_registry();
+return CU_get_error();
+}
+
+if ((CU_add_test (pSuite, "test angle  vol v1", tester_vol_angle_conforme_v1)==NULL)||
+    (CU_add_test (pSuite, "test angle  vol v2", tester_vol_angle_conforme_v2)==NULL)||
+    (CU_add_test (pSuite, "test angle  vol v3", tester_vol_angle_conforme_v3)==NULL)  )
+
+
+/*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
+	(CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v2)== NULL)||
+	 (CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v3)== NULL))            
+*/
+
+{
+CU_cleanup_registry();
+return CU_get_error();
+
+}
+
+
+
+
+
+
+
+
+
 
 
 CU_basic_set_mode (CU_BRM_VERBOSE);

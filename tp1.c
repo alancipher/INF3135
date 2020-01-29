@@ -263,7 +263,7 @@ CU_ASSERT_FALSE (vol_angle_conforme_v1(-10));
 CU_ASSERT_TRUE (vol_angle_conforme_v1(8.5));
 CU_ASSERT_TRUE (vol_angle_conforme_v1(-8.5));
 //
-CU_ASSERT_FALSE (vol_angle_conforme_v1(-9,001));
+CU_ASSERT_FALSE (vol_angle_conforme_v1(-9.001));
 CU_ASSERT_FALSE(vol_angle_conforme_v1(9.0001));
 
 
@@ -284,7 +284,7 @@ CU_ASSERT_FALSE (vol_angle_conforme_v2(-10));
 CU_ASSERT_TRUE (vol_angle_conforme_v2(8.5));
 CU_ASSERT_TRUE (vol_angle_conforme_v2(-8.5));
 //
-CU_ASSERT_FALSE (vol_angle_conforme_v2(-9,001));
+CU_ASSERT_FALSE (vol_angle_conforme_v2(-9.001));
 CU_ASSERT_FALSE(vol_angle_conforme_v2(9.0001));
 
 
@@ -305,7 +305,7 @@ CU_ASSERT_FALSE (vol_angle_conforme_v3(-10));
 CU_ASSERT_TRUE (vol_angle_conforme_v3(8.5));
 CU_ASSERT_TRUE (vol_angle_conforme_v3(-8.5));
 //
-CU_ASSERT_FALSE (vol_angle_conforme_v3(-9,001));
+CU_ASSERT_FALSE (vol_angle_conforme_v3(-9.001));
 CU_ASSERT_FALSE(vol_angle_conforme_v3(9.0001));
 
 

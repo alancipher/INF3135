@@ -66,30 +66,32 @@ Tests  pour  validation des  variantes de la fonction
 */
 void tester_angle_incidence_marge_v1(void)
 {
-CU_ASSERT_TRUE(angle_incidence_marge_v2(0.2,-0.2));// TRUE);
-CU_ASSERT_TRUE(angle_incidence_marge_v2(0.3, -0.2));// FALSE);
-CU_ASSERT_FALSE(angle_incidence_marge_v2(2.5, 6.0));//, TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v1(0.2,-0.2));// TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v1(0.3, -0.2));// FALSE);
+CU_ASSERT_FALSE(angle_incidence_marge_v1(2.5, 6.0));//, TRUE);
 
-CU_ASSERT_TRUE(angle_incidence_marge_v2(51.1, 51.1));//, FALSE);
-CU_ASSERT_TRUE(angle_incidence_marge_v2(5.3,-9.0));//, TRUE);
-CU_ASSERT_TRUE(angle_incidence_marge_v2(-29.5, -26.1));//, FALSE);FALSE);
-
-CU_ASSERT_FALSE(angle_incidence_marge_v2(5.3,9.5));//,TRUE);
-CU_ASSERT_FALSE(angle_incidence_marge_v2(29.5, 26.1)); //, FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v1(51.1, 51.1));//, FALSE);
+CU_ASSERT_FALSE(angle_incidence_marge_v1(5.3,-9.0));//, TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v1(-29.5, -26.1));//, FALSE);FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v1(-29.5, -29.25));//, FALSE);FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v1(29.5, 29.25));//, FALSE);FALSE);
+CU_ASSERT_FALSE(angle_incidence_marge_v1(5.3,9.5));//,TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v1(29.5, 26.1)); //, FALSE);
 //*/ 
 }
 
 
 void tester_angle_incidence_marge_v2(void)
 {
-CU_ASSERT_TRUE(angle_incidence_marge_v2(0.2,-0.2));// TRUE);
-CU_ASSERT_TRUE(angle_incidence_marge_v2(0.3, -0.2));// FALSE);
+CU_ASSERT_FALSE(angle_incidence_marge_v2(0.2,-0.2));// TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v2(0.3, -0.2));// FALSE);
 CU_ASSERT_FALSE(angle_incidence_marge_v2(2.5, 6.0));//, TRUE);
 
 CU_ASSERT_TRUE(angle_incidence_marge_v2(51.1, 51.1));//, FALSE);
-CU_ASSERT_TRUE(angle_incidence_marge_v2(5.3,-9.0));//, TRUE);
-CU_ASSERT_TRUE(angle_incidence_marge_v2(-29.5, -26.1));//, FALSE);FALSE);
-
+CU_ASSERT_FALSE(angle_incidence_marge_v2(5.3,-9.0));//, TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v2(-29.5, -26.1));//, FALSE);FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v2(-29.5, -29.25));//, FALSE);FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v2(29.5, 29.25));//, FALSE);FALSE);
 CU_ASSERT_FALSE(angle_incidence_marge_v2(5.3,9.5));//,TRUE);
 CU_ASSERT_FALSE(angle_incidence_marge_v2(29.5, 26.1)); //, FALSE);
 //*/ 
@@ -102,16 +104,18 @@ CU_ASSERT_FALSE(angle_incidence_marge_v2(29.5, 26.1)); //, FALSE);
 
 void tester_angle_incidence_marge_v3(void)
 {
-CU_ASSERT_TRUE(angle_incidence_marge_v3(0.2,-0.2));// TRUE);
-CU_ASSERT_TRUE(angle_incidence_marge_v3(0.3, -0.2));// FALSE);
+CU_ASSERT_FALSE(angle_incidence_marge_v3(0.2,-0.2));// TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v3(0.3, -0.2));// FALSE);
 CU_ASSERT_FALSE(angle_incidence_marge_v3(2.5, 6.0));//, TRUE);
 
 CU_ASSERT_TRUE(angle_incidence_marge_v3(51.1, 51.1));//, FALSE);
-CU_ASSERT_TRUE(angle_incidence_marge_v3(5.3,-9.0));//, TRUE);
-CU_ASSERT_TRUE(angle_incidence_marge_v3(-29.5, -26.1));//, FALSE);FALSE);
-
+CU_ASSERT_FALSE(angle_incidence_marge_v3(5.3,-9.0));//, TRUE);
+CU_ASSERT_FALSE(angle_incidence_marge_v3(-29.5, -26.1));//, FALSE);FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v3(-29.5, -29.25));//, FALSE);FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v3(29.5, 29.25));//, FALSE);FALSE);
 CU_ASSERT_FALSE(angle_incidence_marge_v3(5.3,9.5));//,TRUE);
 CU_ASSERT_FALSE(angle_incidence_marge_v3(29.5, 26.1)); //, FALSE);
+//*/ 
 //*/ 
 }
 

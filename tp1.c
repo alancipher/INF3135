@@ -154,11 +154,11 @@ CU_ASSERT_FALSE (tarmac_angle_conforme_v2(-0.3));
 
 
 //
-CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0.1));
-CU_ASSERT_TRUE (tarmac_angle_conforme_v1(-0.1));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v2(0.1));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v2(-0.1));
 //
-CU_ASSERT_FALSE (tarmac_angle_conforme_v1(0.20001));
-CU_ASSERT_FALSE(tarmac_angle_conforme_v1(-0.20001));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v2(0.20001));
+CU_ASSERT_FALSE(tarmac_angle_conforme_v2(-0.20001));
 //
 //
 }
@@ -173,11 +173,11 @@ CU_ASSERT_FALSE (tarmac_angle_conforme_v3(-0.3));
 
 
 //
-CU_ASSERT_TRUE (tarmac_angle_conforme_v1(0.1));
-CU_ASSERT_TRUE (tarmac_angle_conforme_v1(-0.1));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v3(0.1));
+CU_ASSERT_TRUE (tarmac_angle_conforme_v3(-0.1));
 //
-CU_ASSERT_FALSE (tarmac_angle_conforme_v1(0.20001));
-CU_ASSERT_FALSE(tarmac_angle_conforme_v1(-0.20001));
+CU_ASSERT_FALSE (tarmac_angle_conforme_v3(0.20001));
+CU_ASSERT_FALSE(tarmac_angle_conforme_v3(-0.20001));
 //
 //
 }
@@ -464,8 +464,8 @@ return CU_get_error();
 }
 
 if ((CU_add_test (pSuite, "test angle sur tarmac v1", tester_tarmac_angle_conforme_v1)==NULL)||
-    (CU_add_test(pSuite,"test angle sur tarmac v2", tester_tarmac_angle_conforme_v1)==NULL)||
-    (CU_add_test(pSuite, "test angle sur tarmac v3", tester_tarmac_angle_conforme_v1)==NULL )  )
+    (CU_add_test(pSuite,"test angle sur tarmac v2", tester_tarmac_angle_conforme_v2)==NULL)||
+    (CU_add_test(pSuite, "test angle sur tarmac v3", tester_tarmac_angle_conforme_v3)==NULL )  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -490,7 +490,7 @@ return CU_get_error();
 
 if ((CU_add_test (pSuite, "test angle sur decollage v1", tester_decollage_angle_conforme_v1)==NULL)||
     (CU_add_test(pSuite,"test angle sur decollage v2", tester_decollage_angle_conforme_v2)==NULL)||
-    (CU_add_test(pSuite, "test angle sur decollage v3", tester_decollage_angle_conforme_v2)==NULL )  )
+    (CU_add_test(pSuite, "test angle sur decollage v3", tester_decollage_angle_conforme_v3)==NULL )  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -537,8 +537,8 @@ return CU_get_error();
 }
 
 if ((CU_add_test (pSuite, "test angle  atterrissage v1", tester_atterrissage_angle_conforme_v1)==NULL)||
-    (CU_add_test (pSuite, "test angle  atterrissage v1", tester_atterrissage_angle_conforme_v1)==NULL)||
-    (CU_add_test (pSuite, "test angle  atterrissage v1", tester_atterrissage_angle_conforme_v1)==NULL)  )
+    (CU_add_test (pSuite, "test angle  atterrissage v2", tester_atterrissage_angle_conforme_v2)==NULL)||
+    (CU_add_test (pSuite, "test angle  atterrissage v3", tester_atterrissage_angle_conforme_v3)==NULL)  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||

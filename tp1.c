@@ -98,7 +98,7 @@ CU_ASSERT_FALSE(angle_incidence_marge_v2(-0.4, -29.6)); //, FALSE);
 void tester_angle_incidence_marge_v3(void)
 {
 CU_ASSERT_TRUE(angle_incidence_marge_v3(0.2,-0.2));// TRUE);
-CU_ASSERT_FALSE(angle_incidence_marge_v3(0.3, -0.2));// FALSE);
+CU_ASSERT_TRUE(angle_incidence_marge_v3(0.3, -0.2));// FALSE);
 CU_ASSERT_TRUE(angle_incidence_marge_v3(2.5, 6.0));//, TRUE);
 /*CU_ASSERT_FALSE(angle_incidence_marge_v3(2.049, 51.1));//, FALSE);
 CU_ASSERT_TRUE(angle_incidence_marge_v3(9.0,-9.0));//, TRUE);

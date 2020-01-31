@@ -9,7 +9,7 @@ SRC2 = tp1.c
 
 
 tp1  : tp1.c flop.o
-	 gcc -Wall -Wextra -std=c11  -I/usr/include/CUnit -L/usr/lib64 -lcunit -o tp1 tp1.c flop.o
+	 gcc -Wall -Wextra -std=c11 -pedantic   -I/usr/include/CUnit -L/usr/lib64 -lcunit -o tp1 tp1.c flop.o
 	./tp1
 
 

@@ -17,7 +17,7 @@ tp1  : tp1.c flop.o
 
 clean :
 	ls
-	rm -f tp1 tp1.zip ziunfnHy zi*
+	rm -f tp1 tp1.zip* ziunfnHy zi*
 	ls
 
 lib :

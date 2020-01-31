@@ -17,7 +17,7 @@ tp1  : tp1.c flop.o
 
 clean :
 	ls
-	rm -f tp1 tp1.zip ziunfnHy
+	rm -f tp1 tp1.zip ziunfnHy zi*
 	ls
 
 lib :
@@ -25,7 +25,7 @@ lib :
 	 #unzip tp1.zip
 	 #zip -FF tp1.zip --out Repairedtp1.zip | unzip Repairedtp1
 	 unzip -t tp1.zip
-	 
+
 
 test :  
 	 ./tp1

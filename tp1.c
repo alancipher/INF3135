@@ -489,9 +489,9 @@ if (pSuite == NULL)
 CU_cleanup_registry();
 return CU_get_error();
 }
-if ((CU_add_test (pSuite, "tester angle incidence marge v1", tester_angle_incidence_marge_v1)==NULL)||
-    (CU_add_test (pSuite, "tester angle incidence marge v2", tester_angle_incidence_marge_v2)==NULL)||
-    (CU_add_test (pSuite, "tester angle incidence marge v3", tester_angle_incidence_marge_v3)==NULL)  )
+if ((CU_add_test (pSuite, "tester_angle_incidence_marge_v1", tester_angle_incidence_marge_v1)==NULL)||
+    (CU_add_test (pSuite, "tester_angle_incidence_marge_v2", tester_angle_incidence_marge_v2)==NULL)||
+    (CU_add_test (pSuite, "tester_angle_incidence_marge_v3", tester_angle_incidence_marge_v3)==NULL)  )
     
 {
 CU_cleanup_registry();
@@ -509,9 +509,9 @@ if (pSuite == NULL)
 CU_cleanup_registry();
 return CU_get_error();
 }
-if ((CU_add_test (pSuite, "test etat appareil v1", testerEtatAppareuil_V1)==NULL)||
-    (CU_add_test(pSuite,"test etat appareil v2", testerEtatAppareuil_V2)==NULL)||
-    (CU_add_test(pSuite, "test etat appareil v3", testerEtatAppareuil_v3)==NULL )  )
+if ((CU_add_test (pSuite, "testerEtatAppareuil_v1", testerEtatAppareuil_V1)==NULL)||
+    (CU_add_test(pSuite,"testerEtatAppareuil_v2", testerEtatAppareuil_V2)==NULL)||
+    (CU_add_test(pSuite, "testerEtatAppareuil_v3", testerEtatAppareuil_v3)==NULL )  )
     
 {
 CU_cleanup_registry();
@@ -535,9 +535,9 @@ CU_cleanup_registry();
 return CU_get_error();
 }
 
-if ((CU_add_test (pSuite, "test angle sur tarmac v1", tester_tarmac_angle_conforme_v1)==NULL)||
-    (CU_add_test(pSuite,"test angle sur tarmac v2", tester_tarmac_angle_conforme_v2)==NULL)||
-    (CU_add_test(pSuite, "test angle sur tarmac v3", tester_tarmac_angle_conforme_v3)==NULL )  )
+if ((CU_add_test (pSuite, "tester_tarmac_angle_conforme_v1", tester_tarmac_angle_conforme_v1)==NULL)||
+    (CU_add_test(pSuite,"tester_tarmac_angle_conforme_v2", tester_tarmac_angle_conforme_v2)==NULL)||
+    (CU_add_test(pSuite, "tester_tarmac_angle_conforme_v3", tester_tarmac_angle_conforme_v3)==NULL )  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -560,9 +560,9 @@ CU_cleanup_registry();
 return CU_get_error();
 }
 
-if ((CU_add_test (pSuite, "test angle sur decollage v1", tester_decollage_angle_conforme_v1)==NULL)||
-    (CU_add_test(pSuite,"test angle sur decollage v2", tester_decollage_angle_conforme_v2)==NULL)||
-    (CU_add_test(pSuite, "test angle sur decollage v3", tester_decollage_angle_conforme_v3)==NULL )  )
+if ((CU_add_test (pSuite, "tester_decollage_angle_conforme_v1", tester_decollage_angle_conforme_v1)==NULL)||
+    (CU_add_test(pSuite,"tester_decollage_angle_conforme_v2", tester_decollage_angle_conforme_v2)==NULL)||
+    (CU_add_test(pSuite, "tester_decollage_angle_conforme_v3", tester_decollage_angle_conforme_v3)==NULL )  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -585,9 +585,9 @@ CU_cleanup_registry();
 return CU_get_error();
 }
 
-if ((CU_add_test (pSuite, "test angle  vol v1", tester_vol_angle_conforme_v1)==NULL)||
-    (CU_add_test (pSuite, "test angle  vol v2", tester_vol_angle_conforme_v2)==NULL)||
-    (CU_add_test (pSuite, "test angle  vol v3", tester_vol_angle_conforme_v3)==NULL)  )
+if ((CU_add_test (pSuite, "tester_vol_angle_conforme_v1", tester_vol_angle_conforme_v1)==NULL)||
+    (CU_add_test (pSuite, "tester_vol_angle_conforme_v2", tester_vol_angle_conforme_v2)==NULL)||
+    (CU_add_test (pSuite, "tester_vol_angle_conforme_v3", tester_vol_angle_conforme_v3)==NULL)  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -610,9 +610,9 @@ CU_cleanup_registry();
 return CU_get_error();
 }
 
-if ((CU_add_test (pSuite, "test angle  atterrissage v1", tester_atterrissage_angle_conforme_v1)==NULL)||
-    (CU_add_test (pSuite, "test angle  atterrissage v2", tester_atterrissage_angle_conforme_v2)==NULL)||
-    (CU_add_test (pSuite, "test angle  atterrissage v3", tester_atterrissage_angle_conforme_v3)==NULL)  )
+if ((CU_add_test (pSuite, "tester_atterrissage_angle_conforme_v1", tester_atterrissage_angle_conforme_v1)==NULL)||
+    (CU_add_test (pSuite, "tester_atterrissage_angle_conforme_v2", tester_atterrissage_angle_conforme_v2)==NULL)||
+    (CU_add_test (pSuite, "tester_atterrissage_angle_conforme_v3", tester_atterrissage_angle_conforme_v3)==NULL)  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -635,9 +635,9 @@ CU_cleanup_registry();
 return CU_get_error();
 }
 
-if ((CU_add_test (pSuite, "test volet ouvert  v1", tester_volet_ouvert_v1)==NULL)||
-    (CU_add_test (pSuite, "test volet ouvert  v2", tester_volet_ouvert_v2)==NULL)||
-    (CU_add_test (pSuite, "test volet ouvert  v3", tester_volet_ouvert_v3)==NULL)  )
+if ((CU_add_test (pSuite, "tester_volet_ouvert_v1", tester_volet_ouvert_v1)==NULL)||
+    (CU_add_test (pSuite, "tester_volet_ouvert_v2", tester_volet_ouvert_v2)==NULL)||
+    (CU_add_test (pSuite, "tester_volet_ouvert_v3", tester_volet_ouvert_v3)==NULL)  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
@@ -661,9 +661,9 @@ CU_cleanup_registry();
 return CU_get_error();
 }
 
-if ((CU_add_test (pSuite, "test volet ouvert ouverture marge v1", tester_volet_ouverture_marge_v1)==NULL)||
-    (CU_add_test (pSuite, "test volet ouvert ouverture marge  v2", tester_volet_ouverture_marge_v2)==NULL)||
-    (CU_add_test (pSuite, "test volet ouvert ouverture  marge v3", tester_volet_ouverture_marge_v3)==NULL)  )
+if ((CU_add_test (pSuite, "tester_volet_ouverture_marge_v1", tester_volet_ouverture_marge_v1)==NULL)||
+    (CU_add_test (pSuite, "tester_volet_ouverture_marge_v2", tester_volet_ouverture_marge_v2)==NULL)||
+    (CU_add_test (pSuite, "tester_volet_ouverture_marge_v3", tester_volet_ouverture_marge_v3)==NULL)  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||

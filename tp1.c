@@ -409,7 +409,7 @@ CU_ASSERT_FALSE (volet_ouvert_v2(0.02));
   }
 
 
-  oid tester_volet_ouvert_v3 (void){
+  void tester_volet_ouvert_v3 (void){
 
 CU_ASSERT_TRUE (volet_ouvert_v3(0.9));
 CU_ASSERT_FALSE (volet_ouvert_v3(0.899999));

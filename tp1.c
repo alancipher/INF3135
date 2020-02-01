@@ -419,6 +419,47 @@ CU_ASSERT_FALSE (volet_ouvert_v3(0.02));
 
   }
 
+/*
+
+test de validation de la fonction volets ouverture marge 
+
+*/
+  void tester_volet_ouverture_marge_v1(void)
+  {
+  CU_ASSERT_TRUE(volet_ouverture_marge_v1(0.9, 0.9));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v1(0.9, 0.14));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v1(0.14, 0.9 ));
+  CU_ASSERT_FALSE(volet_ouverture_marge_v1(0.9, 2.0));
+  CU_ASSERT_FALSE(volet_ouverture_marge_v1(2.0, 0.9));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v1(2.5, 2.0));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v1(2.0, 2.5));
+  }
+
+
+
+  void tester_volet_ouverture_marge_v2(void)
+  {
+  CU_ASSERT_TRUE(volet_ouverture_marge_v2(0.9, 0.9));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v2(0.9, 0.14));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v2(0.14, 0.9 ));
+  CU_ASSERT_FALSE(volet_ouverture_marge_v2(0.9, 2.0));
+  CU_ASSERT_FALSE(volet_ouverture_marge_v2(2.0, 0.9));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v2(2.5, 2.0));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v2(2.0, 2.5));
+  }
+
+
+  void tester_volet_ouverture_marge_v3(void)
+  {
+  CU_ASSERT_TRUE(volet_ouverture_marge_v3(0.9, 0.9));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v3(0.9, 0.14));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v3(0.14, 0.9 ));
+  CU_ASSERT_FALSE(volet_ouverture_marge_v3(0.9, 2.0));
+  CU_ASSERT_FALSE(volet_ouverture_marge_v3(2.0, 0.9));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v3(2.5, 2.0));
+  CU_ASSERT_TRUE(volet_ouverture_marge_v3(2.0, 2.5));
+  }
+
 
 
 /*
@@ -597,6 +638,32 @@ return CU_get_error();
 if ((CU_add_test (pSuite, "test volet ouvert  v1", tester_volet_ouvert_v1)==NULL)||
     (CU_add_test (pSuite, "test volet ouvert  v2", tester_volet_ouvert_v2)==NULL)||
     (CU_add_test (pSuite, "test volet ouvert  v3", tester_volet_ouvert_v3)==NULL)  )
+
+
+/*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
+	(CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v2)== NULL)||
+	 (CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v3)== NULL))            
+*/
+
+{
+CU_cleanup_registry();
+return CU_get_error();
+
+}
+
+
+
+// SUITE DE  TESTS POUR VOLETS OUVERTURE MARGE 
+
+if(pSuite== NULL)
+{
+CU_cleanup_registry();
+return CU_get_error();
+}
+
+if ((CU_add_test (pSuite, "test volet ouvert ouverture  v1", tester_volet_ouverture_marge_v1)==NULL)||
+    (CU_add_test (pSuite, "test volet ouvert ouverture  v1", tester_volet_ouverture_marge_v2)==NULL)||
+    (CU_add_test (pSuite, "test volet ouvert ouverture  v1", tester_volet_ouverture_marge_v3)==NULL)  )
 
 
 /*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||

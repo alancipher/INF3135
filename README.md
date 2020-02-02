@@ -18,11 +18,17 @@
    Dùtilisation 
  ## FICHIERS ACCOMPAGNANTS DESCRIPTION
    * tp1.c
+   C'est le fichier qui contient le code source de nos fonctions de tests ainsi qui la methode main qui permet de les rouler.
    * README.md
+   Ce READEME permet de decrire le contenu de notre projet et aussi son fonctionnement.
    * Makefile
+   Le Makefile permet d'automatiser toutes les taches repetitives qui ont trait construction des lien la compilation et la mise en commun des dependances necessaires pour faire fonctionner le logiciel.
    * cp.txt
+   Ce fichier contient notre code permanent 
    * liste.sh
+   Dans ce fichier contient le sdout qui est la resultante de l'execution de tp1
    * .gitignore
+   Ce dossier va recevoir a la fin de chaque execution toutes les codes binaires et objet dont nous n'avons pas besoin dans le dossier projet. 
 
 
   ## REFERENCES 

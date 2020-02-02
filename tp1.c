@@ -464,8 +464,70 @@ test de validation de la fonction volets ouverture marge
 
 /*
 
-stabilisateur_horizontal_conforme_vX
+test de validation de la foncion stabilisateur_horizontal_conforme_vX
+
 */
+
+  void tester_stabilisateur_horizontal_conforme_v1(void){
+
+
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v1(-1.9));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v1(1.9));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v1(-1));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v1(1));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v1(0));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v1(1.9001));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v1(-1.9001));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v1(2));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v1(-3));
+
+
+
+  }
+
+
+
+  void tester_stabilisateur_horizontal_conforme_v2(void){
+
+
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v2(-1.9));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v2(1.9));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v2(-1));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v2(1));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v2(0));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v2(1.9001));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v2(-1.9001));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v2(2));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v2(-3));
+
+
+
+  }
+
+  void tester_stabilisateur_horizontal_conforme_v3(void){
+
+
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(-1.9));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(1.9));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(-1));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(1));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(0));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(1.9001));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(-1.9001));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(2));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(-3));
+
+
+
+  }
+
+
+
+
+
+
+
+  // DEBUT DE LA METHOIDE MAIN DU TEST 
 int main (void)
 {
 
@@ -678,9 +740,29 @@ return CU_get_error();
 }
 
 
+// SUITE DE TEST POUR stabilisateur_horizontal_conforme_v1
+
+if(pSuite== NULL)
+{
+CU_cleanup_registry();
+return CU_get_error();
+}
+
+if ((CU_add_test (pSuite, "tester_stabilisateur_horizontal_conforme_v1", tester_stabilisateur_horizontal_conforme_v1)==NULL)||
+    (CU_add_test (pSuite, "tester_stabilisateur_horizontal_conforme_v2", tester_stabilisateur_horizontal_conforme_v2)==NULL)||
+    (CU_add_test (pSuite, "tester_stabilisateur_horizontal_conforme_v3", tester_stabilisateur_horizontal_conforme_v3)==NULL)  )
 
 
+/*if ((CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v1)== NULL)||
+	(CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v2)== NULL)||
+	 (CU_add_test(pSuite,"test_angle_incidence", tester_angle_incidence_marge_v3)== NULL))            
+*/
 
+{
+CU_cleanup_registry();
+return CU_get_error();
+
+}
 
 
 

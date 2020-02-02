@@ -24,7 +24,7 @@
    * Makefile
    Le Makefile permet d'automatiser toutes les taches repetitives qui ont trait construction des lien la compilation et la mise en commun des dependances necessaires pour faire fonctionner le logiciel.
    * cp.txt
-   Ce fichier contient notre code permanent 
+   Ce fichier contient notre code permanent. 
    * liste.sh
    Dans ce fichier contient le sdout qui est la resultante de l'execution de tp1
    * .gitignore

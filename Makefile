@@ -30,4 +30,5 @@ lib :
 
 
 test :  
-	 ./tp1
+	 ./tp1 > liste.sh
+	 

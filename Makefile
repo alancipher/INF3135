@@ -21,9 +21,10 @@ clean :
 	ls
 
 lib :
-	 wget https://github.com/guyfrancoeur/INF3135_H2020/blob/master/tp/tp1.zip
+	 wget -p /data https://github.com/guyfrancoeur/INF3135_H2020/blob/master/tp/tp1.zip
 	 #unzip tp1.zip
 	 #zip -FF tp1.zip --out Repairedtp1.zip | unzip Repairedtp1
+	 cd data 
 	 unzip -t tp1.zip
 
 

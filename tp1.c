@@ -36,7 +36,7 @@ CU_ASSERT_TRUE(validation_etat_appareil_v1(ETAT_ETEINT));
 CU_ASSERT_FALSE(validation_etat_appareil_v1(5));
 }
 
-void tester_validation_etat_appareil_V2(void)
+void tester_validation_etat_appareil_v2(void)
 {
 CU_ASSERT_FALSE(validation_etat_appareil_v2(-1));
 CU_ASSERT_TRUE(validation_etat_appareil_v2(ETAT_TARMAC));
@@ -571,8 +571,8 @@ if (pSuite == NULL)
 CU_cleanup_registry();
 return CU_get_error();
 }
-if ((CU_add_test (pSuite, "tester_validation_etat_appareil_v1", tester_validation_etat_appareil_V1)==NULL)||
-    (CU_add_test(pSuite,"tester_validation_etat_appareil_v2", tester_validation_etat_appareil_V2)==NULL)||
+if ((CU_add_test (pSuite, "tester_validation_etat_appareil_v1", tester_validation_etat_appareil_v1)==NULL)||
+    (CU_add_test(pSuite,"tester_validation_etat_appareil_v2", tester_validation_etat_appareil_v2)==NULL)||
     (CU_add_test(pSuite, "tester_validation_etat_appareil_v3", tester_validation_etat_appareil_v3)==NULL )  )
     
 {

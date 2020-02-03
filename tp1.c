@@ -24,7 +24,7 @@ int clean_suite(void) { return 0; }
 */
 
 
-void  testerEtatAppareuil_V1(void )
+void  tester_validation_etat_appareil_v1(void )
 {
 // il s'agit ici de tester diffents cas possibles et penser au cas limites 
 CU_ASSERT_FALSE(validation_etat_appareil_v1(-1))
@@ -36,7 +36,7 @@ CU_ASSERT_TRUE(validation_etat_appareil_v1(ETAT_ETEINT));
 CU_ASSERT_FALSE(validation_etat_appareil_v1(5));
 }
 
-void testerEtatAppareuil_V2(void)
+void tester_validation_etat_appareil_V2(void)
 {
 CU_ASSERT_FALSE(validation_etat_appareil_v2(-1));
 CU_ASSERT_TRUE(validation_etat_appareil_v2(ETAT_TARMAC));
@@ -47,7 +47,7 @@ CU_ASSERT_TRUE(validation_etat_appareil_v2(ETAT_ETEINT));
 CU_ASSERT_TRUE(validation_etat_appareil_v2(5));
 }
 
-void testerEtatAppareuil_v3(void)
+void tester_validation_etat_appareil_v3(void)
 {
 CU_ASSERT_TRUE(validation_etat_appareil_v3(ETAT_TARMAC));
 CU_ASSERT_TRUE(validation_etat_appareil_v3(ETAT_DECOLLAGE));
@@ -571,9 +571,9 @@ if (pSuite == NULL)
 CU_cleanup_registry();
 return CU_get_error();
 }
-if ((CU_add_test (pSuite, "testerEtatAppareuil_v1", testerEtatAppareuil_V1)==NULL)||
-    (CU_add_test(pSuite,"testerEtatAppareuil_v2", testerEtatAppareuil_V2)==NULL)||
-    (CU_add_test(pSuite, "testerEtatAppareuil_v3", testerEtatAppareuil_v3)==NULL )  )
+if ((CU_add_test (pSuite, "tester_validation_etat_appareil_v1", tester_validation_etat_appareil_V1)==NULL)||
+    (CU_add_test(pSuite,"tester_validation_etat_appareil_v2", tester_validation_etat_appareil_V2)==NULL)||
+    (CU_add_test(pSuite, "tester_validation_etat_appareil_v3", tester_validation_etat_appareil_v3)==NULL )  )
     
 {
 CU_cleanup_registry();

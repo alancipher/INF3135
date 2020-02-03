@@ -31,4 +31,4 @@ lib :
 
 test :  
 	 ./tp1 > liste.sh
-	grep "tester*passed" liste.sh
+	grep ...passed liste.sh | 

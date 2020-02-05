@@ -22,4 +22,4 @@ lib :
 
 test :  
 	 ./tp1 > liste.sh
-	grep ...passed liste.sh| cut -d . -f 2
+	grep ...passed liste.sh| cut -d _ -f 4

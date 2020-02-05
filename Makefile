@@ -23,6 +23,6 @@ lib :
 test :  
 	 ./tp1 > liste.sh
 	#grep ...passed liste.sh| cut -d r_ -f 4
-	grep ...passed liste.sh | grep -po "Test: tester_"\K[^ ]+
+	grep -po "Test: tester_"\K[^ ]+ <<< grep ...passed liste.sh 
 
 		#source askubuntu.com/questions/697120/extract-word-from-string-using-grep-sed-awk

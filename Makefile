@@ -28,7 +28,7 @@ test :
 	grep ...passed liste.sh > listetemp # sed 's/.*tester_//g'|sed 's/.*//g' #| cut -d r_ -f 4
 	sed -i 's/\Test: tester_//g' listetemp
 	sed -i 's/\...passed//g' listetemp
+	echo
 	cat listetemp
-	#grep -po "Test: tester_"\K[^ ]+ <<< grep ...passed liste.sh 
-
-		#source askubuntu.com/questions/697120/extract-word-from-string-using-grep-sed-awk
+	echo
+	

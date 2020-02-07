@@ -26,7 +26,7 @@ lib :
 test :  
 	 ./tp1 > liste.sh
 	grep ...passed liste.sh > listetemp # sed 's/.*tester_//g'|sed 's/.*//g' #| cut -d r_ -f 4
-	sed -i 's/\Test://g' listetemp
+	sed -i 's/\Test: tester_//g' listetemp
 	sed -i 's/\...passed//g' listetemp
 	cat listetemp
 	#grep -po "Test: tester_"\K[^ ]+ <<< grep ...passed liste.sh 

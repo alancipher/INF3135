@@ -12,15 +12,15 @@ clean :
 	ls
 
 lib :
-	cd data
+	
 	 wget -P ./data https://github.com/guyfrancoeur/INF3135_H2020/blob/master/tp/tp1.zip
-	 #unzip tp1.zip
+	 unzip -u tp1.zip
 	 #zip -FF tp1.zip --out Repairedtp1.zip | unzip Repairedtp1
 	 #mkdir data 
 	 #cd data
-	unzip -l ./data/tp1
-	#tar -xf ./data/tp1.zip 
-	 #unzip -t github.com/guyfrancoeur/INF3135_H2020/blob/master/tp/tp1.zip
+	#unzip -l ./data/tp1
+	
+	
 
 
 test :  

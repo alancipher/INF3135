@@ -14,7 +14,7 @@ clean :
 lib :
 	
 	 wget -P ./data https://github.com/guyfrancoeur/INF3135_H2020/raw/master/tp/tp1.zip
-	 unzip -u tp1.zip
+	 unzip -u ./data/tp1.zip
 	 #zip -FF tp1.zip --out Repairedtp1.zip | unzip Repairedtp1
 	 #mkdir data 
 	 #cd data

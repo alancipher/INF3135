@@ -13,17 +13,17 @@ clean :
 
 lib :
 	
-	 wget -P ./data https://github.com/guyfrancoeur/INF3135_H2020/raw/master/tp/tp1.zip
-	 unzip -u ./data/tp1.zip
-	 mv flop.o flop.h ./depotC
+	wget -P ./data https://github.com/guyfrancoeur/INF3135_H2020/raw/master/tp/tp1.zip
+	unzip -u ./data/tp1.zip
+	mv flop.o flop.h ./depotC
 	 #zip -FF tp1.zip --out Repairedtp1.zip | unzip Repairedtp1
 	 #mkdir data 
 	 #cd data
 	#unzip -l ./data/tp1
 	
-	
 
-ls
+
+
 test :  
 	 ./tp1 > liste.sh
 	grep ...passed liste.sh > listetemp # sed 's/.*tester_//g'|sed 's/.*//g' #| cut -d r_ -f 4

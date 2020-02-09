@@ -23,9 +23,9 @@ test :
 	rm -rf tp1 
 	gcc -Wall -Wextra -std=c11 -pedantic   -I/usr/include/CUnit -L/usr/lib64 -lcunit -o tp1 tp1.c flop.o 
 	./tp1 > liste.sh
-	grep ...passed liste.sh | sed -i 's/\Test: tester_//g' | sed -i 's/\...passed//g' #> listetemp 
-	#sed -i 's/\Test: tester_//g' #listetemp
-	#sed -i 's/\...passed//g' #listetemp
+	grep ...passed liste.sh > listetemp 
+	sed -i 's/\Test: tester_//g' listetemp
+	sed -i 's/\...passed//g' listetemp
 	echo
 	cat listetemp
 	echo

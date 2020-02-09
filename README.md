@@ -32,7 +32,9 @@
 
 
   ## REFERENCES 
-
+   https://www.commentcamarche.net/faq/49386-comment-deplacer-ou-renommer-un-fichier-sous-linux#deplacer-des-fichiers-du-dossier-courant-vers-un-dossier-distant
+  https://unix.stackexchange.com/questions/84922/extract-a-part-of-one-line-from-a-file-with-sed
+ https://askubuntu.com/questions/54904/unzip-error-end-of-central-directory-signature-not-found
   ## STATUT 
    Au moment de remise de ce TP le travail est complet et nous n`avons pas  
 de bogue existant connu. 
@@ -40,4 +42,4 @@ de bogue existant connu.
    ## AUTOEVALUATION 
 
 
-  *    
+  * 90/100   

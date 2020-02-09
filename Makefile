@@ -8,7 +8,7 @@ tp1  : tp1.c flop.o
 
 clean :
 	ls
-	rm -f tp1 tp1.zip* ziunfnHy zi*
+	rm -rf data tp1 flop.* listetemp
 	ls
 
 lib :
@@ -16,7 +16,7 @@ lib :
 	wget -P ./data https://github.com/guyfrancoeur/INF3135_H2020/raw/master/tp/tp1.zip
 	unzip -u ./data/tp1.zip
 	#mv flop.o flop.h ../
-	#cd ..
+	#rmcd ..
 	 #zip -FF tp1.zip --out Repairedtp1.zip | unzip Repairedtp1
 	 #mkdir data 
 	 #cd data

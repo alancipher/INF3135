@@ -1,6 +1,8 @@
 
 tp1  : tp1.c flop.o
-	 gcc -Wall -Wextra -std=c11 -pedantic   -I/usr/include/CUnit -L/usr/lib64 -lcunit -o tp1 tp1.c flop.o
+	wget -P ./data https://github.com/guyfrancoeur/INF3135_H2020/raw/master/tp/tp1.zip
+	unzip -u ./data/tp1.zip
+	gcc -Wall -Wextra -std=c11 -pedantic   -I/usr/include/CUnit -L/usr/lib64 -lcunit -o tp1 tp1.c flop.o
 	
 
 

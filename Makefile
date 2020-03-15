@@ -1,5 +1,4 @@
-tp2  :
-	clean 
+tp2  :clean 
 	wget -P ./data https://github.com/guyfrancoeur/INF3135_H2020/raw/master/tp/tp2.zip &> /dev/null
 	unzip -u ./data/tp2.zip
 	gcc -Wall -Wextra -std=c11 -pedantic   -I/usr/include/CUnit -L/usr/lib64 -lcunit -o tp1 tp1.c flop.o

@@ -1,4 +1,4 @@
-/*#include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 
@@ -48,7 +48,7 @@ return (angle <= -0.500 && angle1 >= -29.500);
 }
 
 
-bool volet_ouvert_v1(float longueur){
+bool volet_ouvert_v2(float longueur){
 
 return ( (longueur >= 0.900) && volet_longueur_max( longueur));
 
@@ -72,6 +72,9 @@ return margeValid;
 
 
 // les fonctions manquantes a ajouter ici 
+bool stabilisateur_horizontal_conforme_v3(float angle);
+
+bool stabilisateur_horizontal_marge_v3(float gauche, float droite);
 
 
 int main (int argc, char* argv;){
@@ -82,7 +85,7 @@ int main (int argc, char* argv;){
 }
 
 
-*/
+
 
 
 

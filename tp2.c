@@ -74,14 +74,25 @@ return margeValid;
 // les fonctions manquantes a ajouter ici 
 bool stabilisateur_horizontal_conforme_v3(float angle){
 
+bool conforme = false;
+if (angle < -1.900 ||  angle > 1.900){
+	conforme = true; 
 
+}
+ 
+ return conforme;
 
 
 }
 
 bool stabilisateur_horizontal_marge_v3(float gauche, float droite){
 
-
+bool margeValid= false ;
+ double marge = fabs(gauche) - fabs(droite);
+   if (marge <= 0.300){
+   	margeValid = true;
+   }
+return margeValid;
 
 
 }
@@ -95,6 +106,22 @@ int main (int argc, char* argv;){
 }
 
 
+
+
+/*
+angle_incidence_marge_v1
+atterrissage_angle_conforme_v1
+decollage_angle_conforme_v2
+stabilisateur_horizontal_conforme_v3
+stabilisateur_horizontal_marge_v3
+tarmac_angle_conforme_v1
+validation_etat_appareil_v3
+vol_angle_conforme_v3
+volet_ouverture_marge_v3
+volet_ouvert_v2
+
+
+*/
 
 
 

@@ -28,22 +28,22 @@ return etatAppareil;
 
 bool tarmac_angle_conforme_v1(float angle){
 
- return (angle <= 0.200 && angle1 >= -0.200);
+ return (angle <= 0.200 && angle >= -0.200);
 }
 
 
 bool decollage_angle_conforme_v2(float angle){
 
- return (angle <= 51.000 && angle1 >= 2.500);
+ return (angle <= 51.000 && angle >= 2.500);
 }
 
 bool vol_angle_conforme_v3(float angle){
 
-return (angle <= 9.000 && angle1 >= -9.000);
+return (angle <= 9.000 && angle >= -9.000);
 }
 
 bool atterrissage_angle_conforme_v1(float angle){
-return (angle <= -0.500 && angle1 >= -29.500);
+return (angle <= -0.500 && angle >= -29.500);
 
 }
 
@@ -72,9 +72,19 @@ return margeValid;
 
 
 // les fonctions manquantes a ajouter ici 
-bool stabilisateur_horizontal_conforme_v3(float angle);
+bool stabilisateur_horizontal_conforme_v3(float angle){
 
-bool stabilisateur_horizontal_marge_v3(float gauche, float droite);
+
+
+
+}
+
+bool stabilisateur_horizontal_marge_v3(float gauche, float droite){
+
+
+
+
+}
 
 
 int main (int argc, char* argv;){

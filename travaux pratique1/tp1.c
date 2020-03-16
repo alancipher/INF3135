@@ -511,15 +511,15 @@ CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v2(-3));
   void tester_stabilisateur_horizontal_conforme_v3(void){
 
 
-CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(-1.9));
-CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(1.9));
-CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(-1));
-CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(1));
-CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(0));
-CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(1.9001));
-CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(-1.9001));
-CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(2));
-CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(-3));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(-1.9));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(1.9));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(-1));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(1));
+CU_ASSERT_TRUE(stabilisateur_horizontal_conforme_v3(0));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(1.9001));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(-1.9001));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(2));
+CU_ASSERT_FALSE(stabilisateur_horizontal_conforme_v3(-3));
 
 
 

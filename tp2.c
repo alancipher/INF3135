@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <ctype.h>
+#include <string.h>
+#define DELIMS " "
 
 
 bool angle_incidence_marge_v1(float angle1, float angle2){
@@ -98,8 +101,35 @@ return margeValid;
 }
 
 
-int main (int argc, char* argv;){
+char * lireEntree (stdin){
 
+char ligne [128];
+
+fgets (ligne, 128, stdin);
+
+return ligne;
+
+
+}
+
+
+void traiterLigne (char * ligne){
+  char *pc, *ps;
+
+  printf("premiere ligne \n");
+  pc = strtok(ligne, DELIMS);
+  while (pc != NULL){
+  	printf("<%s>\n", pc);
+
+  	pc = strtok(NULL, DELIMS);
+  }
+
+}
+
+
+int main (int argc, char* argv;){
+  char * ligne = lireEntree(stdin);
+  traiterLigne(ligne);
 
 	return 0 ;
 
@@ -119,6 +149,13 @@ validation_etat_appareil_v3
 vol_angle_conforme_v3
 volet_ouverture_marge_v3
 volet_ouvert_v2
+
+
+
+ecrire sur stdout fprintf permet decrire ici sur un flux de sortie 
+
+fprintf(stdout, "Hello, world\n");
+    return 0;
 
 
 */

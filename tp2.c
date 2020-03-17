@@ -8,7 +8,7 @@
 #define DELIMS " "
 
 
-bool angle_incidence_marge_v1(float angle1, float angle2){
+/*bool angle_incidence_marge_v1(float angle1, float angle2){
 	bool margeValid= false ;
  double marge = fabs(angle1) - fabs(angle2);
    if (marge <= 0.250){
@@ -59,10 +59,10 @@ return ( (longueur >= 0.900) && (longueur<= 108.000));
 
 }
 
-/*bool volet_longueur_max(float longueur){
+bool volet_longueur_max(float longueur){
 
 	return (longueur<= 108.000);
-}*/
+}
 
 bool volet_ouverture_marge_v3(float longGauche, float longDroite){
 
@@ -100,7 +100,7 @@ bool margeValid= false ;
 return margeValid;
 
 
-}
+} */
 
 
 char * lireEntree (stdin){

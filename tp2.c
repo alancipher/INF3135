@@ -3,6 +3,8 @@
 #include <math.h>
 #include <ctype.h>
 #include <string.h>
+#include "flop.h"
+#include "Basic.h"
 #define DELIMS " "
 
 

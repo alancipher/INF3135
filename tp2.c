@@ -55,14 +55,14 @@ return (angle <= -0.500 && angle >= -29.500);
 
 bool volet_ouvert_v2(float longueur){
 
-return ( (longueur >= 0.900) && volet_longueur_max( longueur));
+return ( (longueur >= 0.900) && (longueur<= 108.000));
 
 }
 
-bool volet_longueur_max(float longueur){
+/*bool volet_longueur_max(float longueur){
 
 	return (longueur<= 108.000);
-}
+}*/
 
 bool volet_ouverture_marge_v3(float longGauche, float longDroite){
 

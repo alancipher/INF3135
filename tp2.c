@@ -176,15 +176,15 @@ while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litro
 
 
 int gererTimeStamp(char* time ){
-   int valide = 0; 
+   //int valide = 0; 
    int intTime;
    sscanf(time, "%d", &intTime);
-   printf("%d\n", intTime);
-  if (intTime>= 0){
-  	valide = 1;
+   //printf("%d\n", intTime);
+  if (intTime<= 0){
+  	intTime = 0;
 
   }
-  return valide;
+  return intTime;
 }
 
 //void segmenterLigne (char* ligne, char *time, char * trx, char* )
@@ -213,13 +213,14 @@ int main(int argc, char *argv[]) {
     printf("\n%s\n",ligne);
    // printf("%s\n", time);
    int tempvalide =  gererTimeStamp(time);
-              if (tempvalide != 1){
+              if (tempvalide == 0){
    fprintf(stderr, " erreur timeStamp invalide %s\n", time);
                 return 1;
               }
+    printf("%d\n", tempvalide);          
     printf("%s\n",trx );
     printf("%s\n",litrois );
-    //printf("%s\n",liquat);
+    printf("%s\n",liquat);
    // printf("%d\n", a );
             }
 

@@ -164,7 +164,7 @@ void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, c
     //return ligne;
 }
 
-void segmenterLigne (char* ligne, char *time, char * trx, char* )
+//void segmenterLigne (char* ligne, char *time, char * trx, char* )
 
 
 

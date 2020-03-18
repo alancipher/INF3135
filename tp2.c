@@ -103,11 +103,11 @@ return margeValid;
 } */
 
 
-char * lireEntree (stdin){
+char * lireEntree (const char* entre){
 
 char ligne [128];
 
-fgets (ligne, 128, stdin);
+fgets (ligne, 128, entre);
 
 return ligne;
 
@@ -158,6 +158,43 @@ ecrire sur stdout fprintf permet decrire ici sur un flux de sortie
 
 fprintf(stdout, "Hello, world\n");
     return 0;
+
+
+
+
+
+
+    exemple de code qui prend en paramatre un  fichier ou stdin 
+
+
+    Probably you can show your code to see what's missing. This one works.
+
+//$ cat simplecat.c
+#include <stdio.h>
+#include <stdlib.h>
+
+#define BUF_SIZE 100
+
+int main(int argc, char ** argv)
+{ char buf[BUF_SIZE + 1];
+FILE * inp;
+
+if(argc == 2)
+{ inp = fopen(argv[1], "r");
+if(!inp)
+{ return EXIT_FAILURE;
+}
+}
+else
+{ inp = stdin;
+}
+while(fgets(buf, sizeof buf, inp))
+{ printf("%s", buf);
+}
+fclose(inp);
+return EXIT_SUCCESS;
+}
+
 
 
 */

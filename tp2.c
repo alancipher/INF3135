@@ -142,7 +142,7 @@ int main (int argc, char* argv[];){
 
 //extern int getline(char [], int);
 
-/*void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, char *liquat) {
+void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, char *liquat) {
 	
 		
 		//fgets (ligne, 128, fp);
@@ -161,7 +161,7 @@ while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litro
    // printf("%d\n", a );
     }
     //return ligne;
-} */
+} 
 
 
 void  gererTimeStamp(char* time, int* tempvalide ){

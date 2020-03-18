@@ -172,7 +172,7 @@ void  gererTimeStamp(char* time, int* tempvalide ){
   if (intTime<0){
   	
    fprintf(stderr, " erreur timeStamp invalide %s\n", time);
-               return 1;
+               //return 1;
               
 
   } else{
@@ -183,7 +183,10 @@ void  gererTimeStamp(char* time, int* tempvalide ){
 }
 
 //void segmenterLigne (char* ligne, char *time, char * trx, char* )
+void gerertrx (){
 
+
+}
 
 
 int main(int argc, char *argv[]) {
@@ -214,7 +217,30 @@ int main(int argc, char *argv[]) {
     printf("%d\n", tempvalide);
 
 
-    printf("%s\n",trx );
+    // gerer les trx 
+       if (strcmp (trx, "01") == 0){
+
+       printf("%s\n",trx );
+
+       }else if (strcmp (trx, "02") == 0){
+       printf("%s\n",trx );
+
+       }else if (strcmp (trx, "03") == 0){
+       printf("%s\n",trx );
+
+       }else if (strcmp (trx, "04") == 0){
+         printf("%s\n",trx );
+
+       }else if (strcmp (trx, "05") == 0){
+         printf("%s\n",trx );
+
+       }else{
+
+       	// errror trx 
+       	printf("ERREUR TRX");
+       }
+
+   // printf("%s\n",trx );
     printf("%s\n",litrois );
     printf("%s\n",liquat);
    // printf("%d\n", a );

@@ -100,7 +100,7 @@ bool margeValid= false ;
 return margeValid;
 
 
-} */
+} 
 
 
 char * lireEntree (const char* entre){
@@ -129,13 +129,60 @@ void traiterLigne (char * ligne){
 }
 
 
-int main (int argc, char* argv;){
+int main (int argc, char* argv[];){
   char * ligne = lireEntree(stdin);
   traiterLigne(ligne);
 
 	return 0 ;
 
 }
+
+
+*/
+
+void count_lines(FILE *fp, const char *name) {
+    int c, lines = 0;
+    while ((c = getc(fp)) != EOF) {
+        lines += (c == '\n');
+    }
+    printf("%s: %d lines\n", name, lines);
+}
+
+
+
+int main(int argc, char *argv[]) {
+    FILE *fp;
+
+    if (argc > 1) {
+        for (int i = 1; i < argc; i++) {
+            fp = fopen(argv[i], "r");
+            if (fp == NULL) {
+                fprintf(stderr, "cannot open %s\n", argv[i]);
+                return 1;
+            }
+            count_lines(fp, argv[i]);
+            fclose(fp);
+        }
+    } else {
+        /* read from standard input if no argument on the command line */
+        count_lines(stdin, "<stdin>");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

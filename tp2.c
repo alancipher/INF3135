@@ -142,7 +142,7 @@ int main (int argc, char* argv[];){
 
 //extern int getline(char [], int);
 
-void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, char * liquat) {
+void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, char *liquat) {
 	//int c;
    /* int c, lines = 0;
     while ((c = getc(fp)) != EOF) {
@@ -176,8 +176,9 @@ while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litro
 
 
 int gererTimeStamp(char* time ){
-   int valide = 0, intTime;
-   sscanf(time, "%d", intTime)
+   int valide = 0; 
+   int * intTime;
+   sscanf(time, "%d", intTime);
    printf("%d\n", intTime);
   if (intTime>= 0){
   	valide = 1;

@@ -212,7 +212,8 @@ int main(int argc, char *argv[]) {
 
     printf("\n%s\n",ligne);
    // printf("%s\n", time);
-   int tempvalide =  gererTimeStamp(time);
+   int tempvalide;
+   tempvalide =  gererTimeStamp(time);
               if (tempvalide == 0){
    fprintf(stderr, " erreur timeStamp invalide %s\n", time);
                 return 1;

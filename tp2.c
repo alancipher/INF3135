@@ -141,14 +141,16 @@ int main (int argc, char* argv[];){
 */
 
 void count_lines(FILE *fp,  char *ligne) {
+	int c;
    /* int c, lines = 0;
     while ((c = getc(fp)) != EOF) {
         lines += (c == '\n');
     }
     printf("%s: %d lines\n", name, lines);*/
+    while ((c = getc(fp)) != EOF) {
     fgets (ligne, 128, fp);
     printf("%s\n",ligne);
-
+    }
     //return ligne;
 }
 

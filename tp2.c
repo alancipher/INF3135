@@ -207,8 +207,23 @@ int main(int argc, char *argv[]) {
         }
     } else {
         /* read from standard input if no argument on the command line */
-        count_lines(stdin, ligne, time, trx, litrois, liquat);
-    }
+        //count_lines(stdin, ligne, time, trx, litrois, liquat);
+        while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
+
+    printf("\n%s\n",ligne);
+   // printf("%s\n", time);
+   int tempvalide =  gererTimeStamp(time);
+              if (tempvalide != 1){
+   fprintf(stderr, " erreur timeStamp invalide %s\n", time);
+                return 1;
+              }
+    printf("%s\n",trx );
+    printf("%s\n",litrois );
+    printf("%s\n",liquat);
+   // printf("%d\n", a );
+            }
+
+        }
     return 0;
 }
 

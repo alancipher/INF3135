@@ -152,11 +152,12 @@ void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, c
    //while (fgets (ligne, 128, fp) && (c = getchar()) != EOF ) {
    // while(getline(ligne, 128) != EOF){
     	//fgets (ligne, 128, fp);
-	while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s", time, trx, litrois) == 3) ||
-	(fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litrois,liquat) == 4)    ) {
+	//while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s", time, trx, litrois) == 3) ||
+	//(fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litrois,liquat) == 4)    ) {
 
 		
 		//fgets (ligne, 128, fp);
+while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
 
     printf("\n%s\n",ligne);
     printf("%s\n", time);

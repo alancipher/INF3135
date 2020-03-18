@@ -177,8 +177,8 @@ while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litro
 
 int gererTimeStamp(char* time ){
    int valide = 0; 
-   int * intTime;
-   sscanf(time, "%d", intTime);
+   int intTime;
+   sscanf(time, "%d", &intTime);
    printf("%d\n", intTime);
   if (intTime>= 0){
   	valide = 1;
@@ -208,7 +208,7 @@ int main(int argc, char *argv[]) {
     } else {
         /* read from standard input if no argument on the command line */
         //count_lines(stdin, ligne, time, trx, litrois, liquat);
-        while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
+        while ( (fgets (ligne, 128, stdin) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
 
     printf("\n%s\n",ligne);
    // printf("%s\n", time);

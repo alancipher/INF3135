@@ -152,10 +152,13 @@ void count_lines(FILE *fp,  char *ligne) {
    //while (fgets (ligne, 128, fp) && (c = getchar()) != EOF ) {
    // while(getline(ligne, 128) != EOF){
     	//fgets (ligne, 128, fp);
-	while (fgets (ligne, 128, fp) != NULL) {
+	while (fgets (ligne, 128, fp) ) {
+
+		int a = sscanf(ligne);
 		//fgets (ligne, 128, fp);
 
     printf("\n%s\n",ligne);
+    printf("%d\n", a );
     }
     //return ligne;
 }

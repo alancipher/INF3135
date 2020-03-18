@@ -172,7 +172,7 @@ void  gererTimeStamp(char* time, int* tempvalide ){
   if (intTime<0){
   	
    fprintf(stderr, " erreur timeStamp invalide %s\n", time);
-               // return 1;
+               return 1;
               
 
   } else{

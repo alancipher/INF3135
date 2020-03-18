@@ -177,7 +177,7 @@ void  gererTimeStamp(char* time, int* tempvalide ){
 
   } else{
 
-    tempvalide = (int)intTime;
+    *tempvalide = intTime;
   }
   //return intTime;
 }

@@ -219,7 +219,7 @@ int main(int argc, char *argv[]) {
               }
     printf("%s\n",trx );
     printf("%s\n",litrois );
-    printf("%s\n",liquat);
+    //printf("%s\n",liquat);
    // printf("%d\n", a );
             }
 

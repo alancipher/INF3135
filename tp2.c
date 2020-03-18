@@ -140,18 +140,23 @@ int main (int argc, char* argv[];){
 
 */
 
-void count_lines(FILE *fp, const char *name) {
-    int c, lines = 0;
+void count_lines(FILE *fp,  char *ligne) {
+   /* int c, lines = 0;
     while ((c = getc(fp)) != EOF) {
         lines += (c == '\n');
     }
-    printf("%s: %d lines\n", name, lines);
+    printf("%s: %d lines\n", name, lines);*/
+    fgets (ligne, 128, entre);
+    printf("%s\n",ligne);
+
+    //return ligne;
 }
 
 
 
 int main(int argc, char *argv[]) {
     FILE *fp;
+    char ligne [128]; 
 
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {

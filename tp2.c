@@ -148,7 +148,7 @@ void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, c
 		//fgets (ligne, 128, fp);
 while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
 
-    printf("\n%s\n",ligne);
+  /*  printf("\n%s\n",ligne);
    // printf("%s\n", time);
    int tempvalide =  gererTimeStamp(time);
    if (tempvalide != 1){
@@ -158,7 +158,7 @@ while ( (fgets (ligne, 128, fp) && sscanf(ligne, "%s %s %s %s", time, trx, litro
     printf("%s\n",trx );
     printf("%s\n",litrois );
     printf("%s\n",liquat);
-   // printf("%d\n", a );
+   // printf("%d\n", a );*/
     }
     //return ligne;
 } 

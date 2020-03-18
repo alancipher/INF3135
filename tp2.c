@@ -146,7 +146,7 @@ void count_lines(FILE *fp,  char *ligne) {
         lines += (c == '\n');
     }
     printf("%s: %d lines\n", name, lines);*/
-    fgets (ligne, 128, entre);
+    fgets (ligne, 128, fp);
     printf("%s\n",ligne);
 
     //return ligne;
@@ -170,7 +170,7 @@ int main(int argc, char *argv[]) {
         }
     } else {
         /* read from standard input if no argument on the command line */
-        count_lines(stdin, "<stdin>");
+        count_lines(stdin, ligne);
     }
     return 0;
 }

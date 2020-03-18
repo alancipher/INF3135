@@ -159,6 +159,10 @@ void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, c
 		//fgets (ligne, 128, fp);
 
     printf("\n%s\n",ligne);
+    printf("%s\n", time);
+    printf("%s\n",trx );
+    printf("%s\n",litrois );
+    printf("%s\n",liquat);
    // printf("%d\n", a );
     }
     //return ligne;

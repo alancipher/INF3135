@@ -170,7 +170,7 @@ void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, c
 
 int main(int argc, char *argv[]) {
     FILE *fp;
-    char ligne [128]; 
+    char ligne [128]; time[20],  trx[20], litrois[20], liquat[20];
 
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {
@@ -179,12 +179,12 @@ int main(int argc, char *argv[]) {
                 fprintf(stderr, "cannot open %s\n", argv[i]);
                 return 1;
             }
-            count_lines(fp, argv[i]);
+            count_lines( fp, ligne, time, trx, litrois, liquat);
             fclose(fp);
         }
     } else {
         /* read from standard input if no argument on the command line */
-        count_lines(stdin, ligne);
+        count_lines(stdin, ligne, time, trx, litrois, liquat);
     }
     return 0;
 }

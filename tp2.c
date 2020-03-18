@@ -140,6 +140,8 @@ int main (int argc, char* argv[];){
 
 */
 
+extern int getline(char [], int);
+
 void count_lines(FILE *fp,  char *ligne) {
 	int c;
    /* int c, lines = 0;
@@ -147,8 +149,9 @@ void count_lines(FILE *fp,  char *ligne) {
         lines += (c == '\n');
     }
     printf("%s: %d lines\n", name, lines);*/
-    while (fgets (ligne, 128, fp)) {
-    
+   // while (fgets (ligne, 128, fp)) {
+    while(getline(ligne, 128) != EOF){
+    	fgets (ligne, 128, fp);
 
     printf("\n%s\n",ligne);
     }

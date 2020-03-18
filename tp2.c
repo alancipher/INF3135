@@ -170,7 +170,7 @@ void count_lines(FILE *fp,  char *ligne, char *time, char* trx, char *litrois, c
 
 int main(int argc, char *argv[]) {
     FILE *fp;
-    char ligne [128]; time[20],  trx[20], litrois[20], liquat[20];
+    char ligne [128], time[20],  trx[20], litrois[20], liquat[20];
 
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {

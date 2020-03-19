@@ -188,6 +188,7 @@ bool verifierEtat( char * litrois){
 
   bool etatValide = false;
   int intEtat;
+  
   sscanf(litrois, "%d", &intEtat);
 if (validation_etat_appareil_v3(intEtat)){
     etatValide = true;
@@ -205,13 +206,56 @@ void sortieValeurInnacceptableEtat(int* sensor, int* tempvalide, char* litrois){
 }
 
 
+// afficher dectection erreur 
+void detectionErreur(int *sensor, int* tempvalide){
+	char num[4] = "06";
+	printf("%s %d %d\n",num,  *sensor, *tempvalide );
+}
 
+// desactiver MCAS 
+
+void desactiverMCAS(){
+
+	char num [4] = "09";
+	char MCAS [6] = "MCAS";
+	char OFF [4] = "OFF";
+
+printf("%s %s %s \n", num, MCAS, OFF);
+
+}
+
+// verifier angle incidence 
+
+bool verifierAngleIncidence(char* liquat){
+
+
+bool etatValide = false;
+  double angle;
+
+  sscanf(liquat, "%f", &angle);
+if (atterrissage_angle_conforme_v1(angle)|| vol_angle_conforme_v3(angle)|| tarmac_angle_conforme_v1( angle) ||
+	decollage_angle_conforme_v2( angle)){
+    etatValide = true;
+}
+  return etatValide;
+
+}
+
+
+
+
+
+
+
+
+// afficher retablissemnt de systeme operationnel
 
 int main(int argc, char *argv[]) {
     FILE *fp;
     char ligne [128], time[20],  trx[20], litrois[20], liquat[20];
 
     int sensor;
+    int compteurMCAS;
 
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {
@@ -253,7 +297,26 @@ int main(int argc, char *argv[]) {
        //printf("%s\n",trx );
 
        }else if (strcmp (trx, "02") == 0){
-       //printf("%s\n",trx );
+       //gestion des  angles dincidences 
+       	     if ( strcmp (litrois, "A1") != 0 || strcmp (litrois, "A2") != 0 || strcmp (litrois, "A3") != 0 ){
+       	     	sensor = 13;
+       	     	sortieValeurInnacceptableEtat(&sensor, &tempvalide, litrois);
+       	     }
+
+       	     if (strcmp (liquat, "ERROR") == 0 ){
+               sensor = 13 ;
+
+        
+
+       	     	detectionErreur(&sensor, &tempvalide);
+                compteurMCAS ++;
+       	     }
+
+             if (compteurMCAS == 3 ){
+              	desactiverMCAS();
+              }
+
+              if (compteurMCAS <= 3 )
 
        }else if (strcmp (trx, "03") == 0){
        //printf("%s\n",trx );

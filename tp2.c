@@ -270,6 +270,8 @@ int main(int argc, char *argv[]) {
     } else {
         /* read from standard input if no argument on the command line */
         //count_lines(stdin, ligne, time, trx, litrois, liquat);
+printf("**********les sorties stdout a partir dici********\n" );
+        
         while ( (fgets (ligne, 128, stdin) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
 
    // printf("\n%s\n",ligne);
@@ -283,7 +285,7 @@ int main(int argc, char *argv[]) {
 
     // gerer les trx 
        if (strcmp (trx, "01") == 0){
-  printf("**********les sorties stdout a partir dici********\n" );
+  
        	//char valeur[20];
        	// valeur = litrois;
 

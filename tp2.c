@@ -182,16 +182,36 @@ void  gererTimeStamp(char* time, int* tempvalide ){
   //return intTime;
 }
 
-//void segmenterLigne (char* ligne, char *time, char * trx, char* )
-void gerertrx (){
 
+// verifier etat avion 
+bool verifierEtat( char * litrois){
 
+  bool etatValide = false;
+  int intEtat;
+  sscanf(litrois, "%d", &intEtat);
+if (validation_etat_appareil_v3(intEtat)){
+    etatValide = true;
 }
+  return etatValide;
+}
+
+// afficher etat inacceptable avion
+
+void sortieValeurInnacceptableEtat(int* sensor, int* tempvalide, char* litrois){
+
+	char [2] num = "08";
+
+	printf("%s %d %d %s\n", num , *sensor, *tempvalide, *litrois);
+}
+
+
 
 
 int main(int argc, char *argv[]) {
     FILE *fp;
     char ligne [128], time[20],  trx[20], litrois[20], liquat[20];
+
+    int sensor;
 
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {
@@ -220,19 +240,26 @@ int main(int argc, char *argv[]) {
     // gerer les trx 
        if (strcmp (trx, "01") == 0){
 
-       printf("%s\n",trx );
+       	if (!verifierEtat(litrois)){
+          // gestion de valeur inacceptable pour etat avion 
+         sensor = 14;
+         sortieValeurInnacceptableEtat(sensor, tempvalide, litrois);
+
+       	}
+
+       //printf("%s\n",trx );
 
        }else if (strcmp (trx, "02") == 0){
-       printf("%s\n",trx );
+       //printf("%s\n",trx );
 
        }else if (strcmp (trx, "03") == 0){
-       printf("%s\n",trx );
+       //printf("%s\n",trx );
 
        }else if (strcmp (trx, "04") == 0){
-         printf("%s\n",trx );
+        // printf("%s\n",trx );
 
        }else if (strcmp (trx, "05") == 0){
-         printf("%s\n",trx );
+        // printf("%s\n",trx );
 
        }else{
 

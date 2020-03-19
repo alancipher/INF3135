@@ -199,7 +199,7 @@ if (validation_etat_appareil_v3(intEtat)){
 
 void sortieValeurInnacceptableEtat(int* sensor, int* tempvalide, char* litrois){
 
-	char num [2] = "08";
+	char num [4] = "08";
 
 	printf("%s %d %d %s\n", num , *sensor, *tempvalide, litrois);
 }

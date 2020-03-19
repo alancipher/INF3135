@@ -240,7 +240,7 @@ int main(int argc, char *argv[]) {
     // gerer les trx 
        if (strcmp (trx, "01") == 0){
 
-       	char valeur[20] = litrois;
+       	char valeur[20] = *litrois;
 
        	if (!verifierEtat(litrois)){
           // gestion de valeur inacceptable pour etat avion 

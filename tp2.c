@@ -232,7 +232,7 @@ bool verifierAngleIncidence(char* liquat){
 bool etatValide = false;
   double angle;
 
-  sscanf(liquat, "%f", &angle);
+  sscanf(liquat, "%lf", &angle);
 if (atterrissage_angle_conforme_v1(angle)|| vol_angle_conforme_v3(angle)|| tarmac_angle_conforme_v1( angle) ||
 	decollage_angle_conforme_v2( angle)){
     etatValide = true;
@@ -316,7 +316,7 @@ int main(int argc, char *argv[]) {
               	desactiverMCAS();
               }
 
-              if (compteurMCAS <= 3 )
+              //if (compteurMCAS <= 3 )
 
        }else if (strcmp (trx, "03") == 0){
        //printf("%s\n",trx );
@@ -339,6 +339,7 @@ int main(int argc, char *argv[]) {
    // printf("%d\n", a );
             }
 
+     
         }
     return 0;
 }

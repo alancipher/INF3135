@@ -240,13 +240,13 @@ int main(int argc, char *argv[]) {
     // gerer les trx 
        if (strcmp (trx, "01") == 0){
 
-       	char valeur[20];
-       	 valeur = litrois;
+       	//char valeur[20];
+       	// valeur = litrois;
 
        	if (!verifierEtat(litrois)){
           // gestion de valeur inacceptable pour etat avion 
          sensor = 14;
-         sortieValeurInnacceptableEtat(&sensor, &tempvalide, valeur);
+         sortieValeurInnacceptableEtat(&sensor, &tempvalide, litrois);
 
        	}
 

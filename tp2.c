@@ -201,7 +201,7 @@ void sortieValeurInnacceptableEtat(int* sensor, int* tempvalide, char* litrois){
 
 	char num [2] = "08";
 
-	printf("%s %d %d %s\n", num , *sensor, *tempvalide, *litrois);
+	printf("%s %d %d %d\n", num , *sensor, *tempvalide, *litrois);
 }
 
 
@@ -228,7 +228,7 @@ int main(int argc, char *argv[]) {
         //count_lines(stdin, ligne, time, trx, litrois, liquat);
         while ( (fgets (ligne, 128, stdin) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
 
-    printf("\n%s\n",ligne);
+   // printf("\n%s\n",ligne);
    // printf("%s\n", time);
 
    int tempvalide;
@@ -268,8 +268,8 @@ int main(int argc, char *argv[]) {
        }
 
    // printf("%s\n",trx );
-    printf("%s\n",litrois );
-    printf("%s\n",liquat);
+   // printf("%s\n",litrois );
+   // printf("%s\n",liquat);
    // printf("%d\n", a );
             }
 

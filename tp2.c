@@ -234,16 +234,18 @@ int main(int argc, char *argv[]) {
    int tempvalide;
   // tempvalide =  gererTimeStamp(time);
      gererTimeStamp(time, &tempvalide);         
-    printf("%d\n", tempvalide);
+    //printf("%d\n", tempvalide);
 
 
     // gerer les trx 
        if (strcmp (trx, "01") == 0){
 
+       	char valeur[20] = litrois;
+
        	if (!verifierEtat(litrois)){
           // gestion de valeur inacceptable pour etat avion 
          sensor = 14;
-         sortieValeurInnacceptableEtat(&sensor, &tempvalide, litrois);
+         sortieValeurInnacceptableEtat(&sensor, &tempvalide, valeur);
 
        	}
 

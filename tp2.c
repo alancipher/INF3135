@@ -199,7 +199,7 @@ if (validation_etat_appareil_v3(intEtat)){
 
 void sortieValeurInnacceptableEtat(int* sensor, int* tempvalide, char* litrois){
 
-	char [2] num = "08";
+	char num [2] = "08";
 
 	printf("%s %d %d %s\n", num , *sensor, *tempvalide, *litrois);
 }
@@ -243,7 +243,7 @@ int main(int argc, char *argv[]) {
        	if (!verifierEtat(litrois)){
           // gestion de valeur inacceptable pour etat avion 
          sensor = 14;
-         sortieValeurInnacceptableEtat(sensor, tempvalide, litrois);
+         sortieValeurInnacceptableEtat(&sensor, &tempvalide, litrois);
 
        	}
 

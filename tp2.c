@@ -280,7 +280,7 @@ int main(int argc, char *argv[]) {
      gererTimeStamp(time, &tempvalide);         
     //printf("%d\n", tempvalide);
 
-printf("**********les sorties stdout a partir dici********\n");
+
     // gerer les trx 
        if (strcmp (trx, "01") == 0){
 

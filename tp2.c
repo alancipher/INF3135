@@ -280,10 +280,10 @@ int main(int argc, char *argv[]) {
      gererTimeStamp(time, &tempvalide);         
     //printf("%d\n", tempvalide);
 
-
+printf("**********les sorties stdout a partir dici********\n");
     // gerer les trx 
        if (strcmp (trx, "01") == 0){
-printf("**********les sorties stdout a partir dici********\n");
+
        	//char valeur[20];
        	// valeur = litrois;
 

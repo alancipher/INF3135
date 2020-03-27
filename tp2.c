@@ -275,6 +275,7 @@ int main(int argc, char *argv[]) {
     int sensor;
     int compteurMCAS;
     int capteurEtat = 0;
+    int intEtat =0;
 
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {
@@ -328,7 +329,7 @@ printf("**********les sorties stdout a partir dici********\n" );
        	   double capteurA1;
              if (strcmp (litrois, "A1") == 0 && strcmp (liquat, "ERROR") != 0){
              	if (verifierAngleIncidence(liquat)){
-             		capteurA1 = sscanf(liquat, "%lf", &angle);
+             		 sscanf(liquat, "%lf", &capteurA1);
 
              	}else if (!verifierAngleIncidence(liquat)){
                 sortieValeurInnacceptableEtat(&sensor, &tempvalide, liquat);

@@ -224,6 +224,20 @@ printf("%s %s %s \n", num, MCAS, OFF);
 
 }
 
+
+// activer MCAS 
+void activerMCAS(){
+
+  char num [4] = "09";
+  char MCAS [6] = "MCAS";
+  char OFF [4] = "ON";
+
+printf("%s %s %s \n", num, MCAS, OFF);
+
+}
+
+
+
 // verifier angle incidence 
 
 bool verifierAngleIncidence(char* liquat){
@@ -233,10 +247,14 @@ bool etatValide = false;
   double angle;
 
   sscanf(liquat, "%lf", &angle);
-if (atterrissage_angle_conforme_v1(angle)|| vol_angle_conforme_v3(angle)|| tarmac_angle_conforme_v1( angle) ||
+/*if (atterrissage_angle_conforme_v1(angle)|| vol_angle_conforme_v3(angle)|| tarmac_angle_conforme_v1( angle) ||
 	decollage_angle_conforme_v2( angle)){
     etatValide = true;
-}
+}*/
+
+  if (angle>= 0 && angle <= 360){
+  	etatValide = true;
+  }
   return etatValide;
 
 }
@@ -256,6 +274,7 @@ int main(int argc, char *argv[]) {
 
     int sensor;
     int compteurMCAS;
+    int capteurEtat = 0;
 
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {
@@ -271,7 +290,7 @@ int main(int argc, char *argv[]) {
         /* read from standard input if no argument on the command line */
         //count_lines(stdin, ligne, time, trx, litrois, liquat);
 printf("**********les sorties stdout a partir dici********\n" );
-        
+
         while ( (fgets (ligne, 128, stdin) && sscanf(ligne, "%s %s %s %s", time, trx, litrois, liquat) >=3)){
 
    // printf("\n%s\n",ligne);
@@ -294,12 +313,30 @@ printf("**********les sorties stdout a partir dici********\n" );
          sensor = 14;
          sortieValeurInnacceptableEtat(&sensor, &tempvalide, litrois);
 
+       	}else {
+         capteurEtat = sscanf(litrois, "%d", &intEtat);
+
        	}
 
        //printf("%s\n",trx );
 
        }else if (strcmp (trx, "02") == 0){
        //gestion des  angles dincidences 
+
+         // ***traiter A1 
+
+       	   double capteurA1;
+             if (strcmp (litrois, "A1") == 0 && strcmp (liquat, "ERROR") != 0){
+             	if (verifierAngleIncidence(liquat)){
+             		capteurA1 = sscanf(liquat, "%lf", &angle);
+
+             	}else if (!verifierAngleIncidence(liquat)){
+                sortieValeurInnacceptableEtat(&sensor, &tempvalide, liquat);
+
+             	}
+             }
+
+
        	     if ( strcmp (litrois, "A1") != 0 || strcmp (litrois, "A2") != 0 || strcmp (litrois, "A3") != 0 ){
        	     	sensor = 13;
        	     	sortieValeurInnacceptableEtat(&sensor, &tempvalide, litrois);
